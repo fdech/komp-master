@@ -1,1 +1,306 @@
 @import mixins.sass
+@import variables.sass
+
+body
+    margin: 0
+    padding: 0
+    font-family: Roboto, sans-serif
+
+.wrapper
+    width: 1120px
+    margin: 0 auto
+
+.button
+    display: block
+    cursor: pointer
+    font: inherit
+    background-color: $bg-color
+    border: none
+    opacity: 0.7
+    transition: opacity 0.15s linear
+
+.main-header
+    background-color: #fff
+
+.menu-nav
+    width: 1120px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+
+    text-transform: uppercase
+
+.nav-logo
+
+.logo-text
+    margin: 0
+    padding: 0
+    font-size: 18px
+    color: $main-color
+
+.logo-text--black
+    font-size: 29px
+    font-weight: 700
+    line-height: 1
+    color: #000000
+
+.nav-list
+    @include ul-reset
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.nav-item a
+    @include a-reset
+    padding: 30px 15px
+    transition: all 0.2s linear
+
+.nav-item a:hover,
+.nav-item a:active
+    background-color: $bg-color
+    
+
+.nav-contacts
+    @include ul-reset
+
+.contacts-phone
+    @include a-reset
+    color: $main-color
+    font-size: 25px
+    font-weight: 700
+    padding: 25px 15px 25px 15px
+    transition: all 0.2s linear
+    
+.contacts-phone:hover,
+.contacts-phone:active
+    color: #000000
+    background-color: $bg-color
+
+//main-page
+
+.main-page
+
+.form-bg
+    background-color: #e1e1df
+    background-image: url('../img/main-photo-1.png')
+    background-repeat: no-repeat
+    background-position: right 0
+    padding-bottom: 50px
+
+.main-form
+    padding-top: 30px
+    width: 1120px
+    margin: 0 auto
+    min-height: 700px
+
+.form-wrapper
+   width: 600px
+    
+.form-title
+    line-height: 1.1
+    font-size: 50px
+    color: $main-color
+    text-align: center
+    font-weight: 700
+
+.order-form
+    background-color: #fff
+    padding: 20px 60px
+
+.order-title
+    font-size: 28px
+    text-align: center
+    margin-bottom: 40px
+
+.order-form form
+    display: flex
+    flex-direction: column
+
+.order-form__item 
+    margin-bottom: 20px
+
+.order-form__item label
+    margin-bottom: 10px
+    text-transform: uppercase
+    display: block
+    
+.order-form__item input
+    width: 100%
+    border: 2px solid #e1e1df
+    border-radius: 10px
+    box-sizing: border-box
+    padding-left: 10px
+    height: 40px
+
+    text-transform: uppercase
+    font-family: Roboto, sans-serif  
+
+.order-form__item textarea
+    box-sizing: border-box
+    border: 2px solid #e1e1df
+    border-radius: 10px
+    box-sizing: border-box
+    width: 100%
+    padding: 10px
+    text-transform: uppercase
+    font-family: Roboto, sans-serif
+    resize: vertical
+    
+
+
+.order-form .button
+    font-size: 20px
+    align-self: center
+    padding: 20px 50px
+    border-radius: 20px
+    
+
+.order-form .button:hover,
+.order-form .button:active,
+.order-form .button:focus
+    outline: none
+    opacity: 1
+
+
+.services
+    padding: 40px 0
+
+.title
+    margin-top: 0
+    font-size: 40px
+    font-weight: 700
+    color: $main-color
+    text-align: center
+    margin-bottom: 30px
+
+.services-list
+    @include ul-reset
+    width: 800px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: -1px
+    border: 1px solid #e1e1df
+    margin-bottom: 30px
+
+
+.service-item
+    border: 1px solid #e1e1df
+    padding: 20px
+    text-align: center
+
+.service-item--dark
+    background-color:#ebebe7
+
+.services-mark
+    text-align: center
+
+//обо мне
+
+.about-us
+    background-color: #eef3fa
+    padding: 50px 0
+
+.about-us__description
+    width: 900px
+    margin: 0 auto
+    font-size: 18px
+    text-align: center
+    margin-bottom: 20px
+
+.about-us__subtitle
+    text-align: center
+    margin-bottom: 30px
+    font-size: 25px
+
+.about-us__list
+    @include ul-reset
+    width: 900px
+    margin: 0 auto
+    display: grid
+    grid-column-gap: 10px
+    grid-row-gap: 10px
+    grid-template-columns: 1fr 1fr
+
+.about-us__item
+    position: relative
+    padding: 20px
+    padding-top: 70px
+    width: 400px
+    background-color: #fff
+    text-align: center
+    border-radius: 20px
+
+.about-us__item--coin h4::before
+    @include icon-pos
+    -webkit-mask-image: url('../img/coin.svg')
+
+.about-us__item--like h4::before
+    @include icon-pos
+    -webkit-mask-image: url('../img/like.svg')
+
+.about-us__item--timer h4::before
+    @include icon-pos
+    -webkit-mask-image: url('../img/timer.svg')
+
+.about-us__item--verified h4::before
+    @include icon-pos
+    -webkit-mask-image: url('../img/verified.svg')
+    
+.about-us__button
+    width: 300px
+    padding: 20px
+    margin: 30px auto 0
+    text-align: center
+    border-radius: 20px
+    
+.about-us__button:hover,
+.about-us__button:active
+    opacity: 1
+
+//фотогалерея
+.photo
+    padding: 30px 0
+
+.photo-list
+    @include ul-reset
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-row-gap: 30px
+
+//контакты
+
+.contacts
+    padding: 30px 0
+
+.contacts .title
+    text-align: left
+
+.contacts__wrapper
+    display: flex
+    justify-content: space-between
+
+.contacts__number
+    font-weight: 500
+    font-size: 20px
+    margin-bottom: 0
+
+.contacts-adress
+    margin-top: 0
+    font-size: 30px
+    background-color: $bg-color
+    padding: 20px
+
+.contacts__time-title
+    font-size: 30px
+    margin-bottom: 5px
+
+.contacts__time
+    font-size: 20px
+    padding-left: 10px
+    line-height: 1.5
+
+.contacts__map
+    align-self: center

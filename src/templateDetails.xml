@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template">
+ <name>design_studio</name>
+ <version>1.0.0</version>
+ <creationDate>27.06.2016</creationDate>
+ <author>Viktor</author>
+ <authorMail>admin@admin.com</authorMail>
+ <authorUrl>//webformyself.com </authorUrl>
+ <copyright>Copyright (C) design_studio</copyright>
+ <license>License Information</license>
+ <description>TPL_DESIGN_STUDIO_DESCRIPTION</description>
+ 
+ <files>
+ 
+ <folder>css</folder>
+ <folder>img</folder>
+ <folder>html</folder>
+ <folder>language</folder>
+ 
+ <filename>index.html</filename>
+ <filename>index.php</filename>
+ <filename>templateDetails.xml</filename>
+ <filename>template_thumbnail.png</filename>
+ <filename>template_preview.png</filename>
+ 
+ </files>
+ 
+ <positions>
+ 
+ <position>position-0</position>
+ <position>position-1</position>
+ <position>position-2</position>
+ <position>position-3</position>
+ <position>position-4</position>
+ 
+ </positions>
+ 
+ <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_design_studio.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_design_studio.sys.ini</language>
+ </languages>
+ 
+</extension>
